@@ -9,7 +9,7 @@ const AddUserForm = ({ onUserAdded }) => {
         if (!name) return alert("Enter name");
         await API.post("/add-user", { name });
         setName("");
-        onUserAdded(); // Refresh user list
+        onUserAdded();
     };
 
     return (

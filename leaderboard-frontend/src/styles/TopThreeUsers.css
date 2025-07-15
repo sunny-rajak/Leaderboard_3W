@@ -4,7 +4,7 @@
     align-items: flex-end;
     gap: 20px;
     margin-bottom: 20px;
-    flex-wrap: nowrap; /* Keep in one row even on small screens */
+    flex-wrap: nowrap;
 }
 
 .podium-user {
@@ -30,7 +30,6 @@
     margin: 0 auto 10px auto;
 }
 
-/* Podium positions */
 .first {
     transform: translateY(-20px);
     background: #ffe082;
@@ -50,7 +49,6 @@
     transform: scale(1.05);
 }
 
-/* No change on mobile to preserve podium layout */
 @media screen and (max-width: 600px) {
     .podium-user {
         width: 80px;
