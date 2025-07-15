@@ -5,12 +5,18 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const userRoutes = require("./routes/userRoutes");
 
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://leaderboard-3-w.vercel.app",
+];
+
 dotenv.config();
 
 const app = express();
+
 app.use(
     cors({
-        origin: "https://leaderboard-3-w.vercel.app/",
+        origin: allowedOrigins,
         credentials: true,
     })
 );
@@ -24,7 +30,7 @@ mongoose
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.log(err));
 
-app.use("/api", userRoutes);
+app.use("/", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
