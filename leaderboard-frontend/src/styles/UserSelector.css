@@ -1,0 +1,39 @@
+.user-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.user-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.user-selector button {
+    padding: 8px 15px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-selector button:hover {
+    background: #43a047;
+}
+
+@media screen and (max-width: 600px) {
+    .user-selector {
+        flex-direction: column;
+    }
+
+    .user-selector select,
+    .user-selector button {
+        width: 100%;
+    }
+}
