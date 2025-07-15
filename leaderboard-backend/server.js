@@ -8,7 +8,12 @@ const userRoutes = require("./routes/userRoutes");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(
+    cors({
+        origin: "https://leaderboard-3-w.vercel.app/",
+        credentials: true,
+    })
+);
 app.use(bodyParser.json());
 
 mongoose
